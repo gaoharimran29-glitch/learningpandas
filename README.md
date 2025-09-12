@@ -26,7 +26,7 @@ At the end, you’ll also learn about the important parameter `ignore_index` wit
 
 ## 🔧 Installation & Setup
 
-```
+```bash
 # Install pandas
 pip install pandas
 
@@ -40,7 +40,7 @@ CSV and JSON support works out-of-the-box.
 
 ## 📥 Reading Files into Pandas
 
-```
+```python
 import pandas as pd
 
 # Reading Excel file
@@ -71,7 +71,7 @@ print(df.describe())
 
 ## 🏗 Creating a DataFrame
 
-```
+```python
 import pandas as pd
 
 data = {
@@ -96,7 +96,7 @@ print(df)
 
 ## 📖 Viewing Data
 
-```
+```python
 print(df.head(1))  # First row
 print(df.tail(1))  # Last row
 print("Shape:", df.shape)  # (rows, columns)
@@ -113,7 +113,7 @@ print("Columns:", df.columns)
 
 ## 💾 Saving DataFrames
 
-```
+```python
 df.to_excel("output.xlsx", index=False)  # Save Excel
 df.to_csv("output.csv")                  # Save CSV
 df.to_json("output.json")                # Save JSON
@@ -123,7 +123,7 @@ df.to_json("output.json")                # Save JSON
 
 ## 🎯 Selecting Data
 
-```
+```python
 # Selecting one column (returns Series)
 print(df["Name"])
 
@@ -142,7 +142,7 @@ print(aged2)
 
 ## ✏️ Updating & Inserting Data
 
-```
+```python
 # Update value
 df.loc[0, "AGE"] = 30
 print(df)
@@ -164,7 +164,7 @@ print(df)
 
 ## 🚫 Handling Missing Data
 
-```
+```python
 import pandas as pd
 import numpy as np
 
@@ -198,7 +198,7 @@ print(df)
 
 ## 🔄 Sorting & Grouping
 
-```
+```python
 # Sort values by AGE descending
 df.sort_values(by="AGE", ascending=False, inplace=True)
 print(df)
@@ -212,7 +212,7 @@ print(grouped)
 
 ## 📈 Interpolation
 
-```
+```python
 data = {
     "Time":[1,2,3,4,5],
     "Value":[10, None, 30, 40,50]
@@ -226,7 +226,7 @@ print(df)
 
 ## 🔗 Merging DataFrames
 
-```
+```python
 df_customers = pd.DataFrame({
     'CustomerId':[1,2,3],
     'Name':['Ramesh','Suresh','Kalpesh']
@@ -255,7 +255,7 @@ print(df_merged)
 
 ## ➕ Concatenation
 
-```
+```python
 df_Region1 = pd.DataFrame({
     'CustomerId':[1,2,3],
     'Name':['Ramesh','Suresh','Kalpesh']
@@ -275,7 +275,7 @@ print(df_concat)
 
 ## 📝 Understanding ignore_index
 
-```
+```python
 # ignore_index=True resets the index after concatenation
 df_a = pd.DataFrame({"X":[1,2,3]})
 df_b = pd.DataFrame({"X":[4,5,6]})
@@ -286,6 +286,7 @@ print(pd.concat([df_a, df_b], ignore_index=False))
 # With ignore_index
 print(pd.concat([df_a, df_b], ignore_index=True))
 ```
+We can also use axis=0 for concatenating according to row and axis = 1 for concatenating according to column.
 
 Output:  
 
