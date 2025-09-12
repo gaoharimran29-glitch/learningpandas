@@ -188,6 +188,7 @@ df.dropna(inplace=True)
 
 # Drop columns
 df.drop(columns=["ID","AGE"], inplace=True)
+#inplace=True is used when we want modification in our original dataframe
 print(df)
 ```
 
@@ -275,7 +276,7 @@ print(df_concat)
 
 ---
 
-## Understanding ignore_index
+### Understanding ignore_index
 
 ```python
 # ignore_index=True resets the index after concatenation
